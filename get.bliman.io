@@ -89,7 +89,7 @@ function __bliman_quick_install() {
 	export BLIMAN_SERVICE="https://raw.githubusercontent.com"
 	export BLIMAN_NAMESPACE="asa1997"
 	export BLIMAN_REPO_URL="$BLIMAN_SERVICE/$BLIMAN_NAMESPACE/BLIman/main"
-	export BLIMAN_VERSION="tmp-0.0.20"
+	export BLIMAN_VERSION="tmp-0.0.21"
 	export BLIMAN_LAB_URL="$BLIMAN_SERVICE/$BLIMAN_NAMESPACE/BeSLab/main"
 	
 	# export BLIMAN_NATIVE_VERSION="0.2.9"
@@ -320,7 +320,7 @@ EOF
 	#cp -r "contrib/" "$BLIMAN_DIR"
 	#cp -r "src/main/bash" "$bliman_src_folder"
 	mkdir -p "$BLIMAN_DIR/bin/"
-	cp -rf "${bliman_tmp_folder}"/bliman-*/* "$bliman_src_folder"
+	cp -rf "${bliman_tmp_folder}"/bliman-* "$bliman_src_folder"
 	mv "$bliman_src_folder"/bliman-init.sh "$BLIMAN_DIR/bin/"
 
 	# clean up
