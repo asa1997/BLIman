@@ -87,9 +87,9 @@ function __bliman_quick_install() {
 
 	# Global variables
 	export BLIMAN_SERVICE="https://raw.githubusercontent.com"
-	export BLIMAN_NAMESPACE="Be-Secure"
+	export BLIMAN_NAMESPACE="asa1997"
 	export BLIMAN_REPO_URL="$BLIMAN_SERVICE/$BLIMAN_NAMESPACE/BLIman/main"
-	export BLIMAN_VERSION="tmp-0.0.18"
+	export BLIMAN_VERSION="tmp-0.0.20"
 	export BLIMAN_LAB_URL="$BLIMAN_SERVICE/$BLIMAN_NAMESPACE/BeSLab/main"
 	
 	# export BLIMAN_NATIVE_VERSION="0.2.9"
@@ -302,9 +302,8 @@ EOF
 	if [[ -z "$ARCHIVE_OK" ]]; then
 		echo "Downloaded zip archive corrupt. Are you connected to the internet?"
 		echo ""
-		echo "If problems persist, please ask for help on our Slack:"
-		echo "* easy sign up: https://slack.bliman.io/"
-		echo "* report on channel: https://bliman.slack.com/app_redirect?channel=user-issues"
+		echo "If problems persist, please raise an issue in:"
+		echo "* https://github.com/Be-Secure/BLIman/issues"
 		exit
 	fi
 
