@@ -38,17 +38,19 @@ sed -i "s/@BLIMAN_NAMESPACE@/$BLIMAN_NAMESPACE/g" "$file"
 echo "Renaming to remove .tmpl extension"
 mv "$file" "${file//.tmpl/}"
 
-mkdocs new bliman
-mv "$HOME/BLIman/bliman" "$HOME/BLIman"
-
+mkdocs new website
+mv "$HOME"/BLIman/website/* "$HOME"/BLIman/
+rm -rf website
 echo "Listing scripts"
 ls "$HOME/BLIman/scripts"
+echo "Listing root"
+ls "$HOME/BLIman"
 echo "Moving to docs"
-mv "$HOME/BLIman/scripts/get.bliman.io" "$HOME/BLIMAN/docs/"
+mv "$HOME/BLIman/scripts/get.bliman.io" "$HOME/BLIman/docs/"
 
 
 # committing the changes
-git add "$HOME/BLIman/scripts/get.bliman.io"
+git add "$HOME/BLIman/*"
 git commit -m "Updating version of $branch to $bli_version"
 
 #push release branch
