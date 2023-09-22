@@ -89,7 +89,7 @@ function __bliman_quick_install() {
 	export BLIMAN_SERVICE="https://raw.githubusercontent.com"
 	export BLIMAN_NAMESPACE="asa1997"
 	export BLIMAN_REPO_URL="$BLIMAN_SERVICE/$BLIMAN_NAMESPACE/BLIman/main"
-	export BLIMAN_VERSION="tmp-0.0.21"
+	export BLIMAN_VERSION="tmp-0.0.22"
 	export BLIMAN_LAB_URL="$BLIMAN_SERVICE/$BLIMAN_NAMESPACE/BeSLab/main"
 	
 	# export BLIMAN_NATIVE_VERSION="0.2.9"
