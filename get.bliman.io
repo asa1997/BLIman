@@ -89,7 +89,7 @@ function __bliman_quick_install() {
 	export BLIMAN_SERVICE="https://raw.githubusercontent.com"
 	export BLIMAN_NAMESPACE="Be-Secure"
 	export BLIMAN_REPO_URL="$BLIMAN_SERVICE/$BLIMAN_NAMESPACE/BLIman/main"
-	export BLIMAN_VERSION="tmp-0.0.1a"
+	export BLIMAN_VERSION="tmp-0.0.a2"
 	export BLIMAN_LAB_URL="$BLIMAN_SERVICE/$BLIMAN_NAMESPACE/BeSLab/main"
 	
 	# export BLIMAN_NATIVE_VERSION="0.2.9"
@@ -176,7 +176,7 @@ EOF
 		echo ""
 		echo " Please consider running the following if you need to upgrade."
 		echo ""
-		echo "    $ sdk selfupdate force"
+		echo "    $ bli selfupdate force"
 		echo ""
 		echo "======================================================================================================"
 		echo ""
@@ -264,7 +264,7 @@ EOF
 
 	echo "Getting available candidates..."
 	echo "from ${BLIMAN_REPO_URL}/candidates.txt"
-	BLIMAN_CANDIDATES_CSV=$(curl -s "${BLIMAN_REPO_URL}/candidates.txt")
+	BLIMAN_CANDIDATES_CSV=$(curl -s -k "${BLIMAN_REPO_URL}/candidates.txt")
 	echo "$BLIMAN_CANDIDATES_CSV" >"${BLIMAN_DIR}/var/candidates"
 
 	echo "Prime the config file..."
@@ -295,7 +295,7 @@ EOF
 	# fetch distribution
 	bliman_zip_file="${bliman_tmp_folder}/bliman-${BLIMAN_VERSION}.zip"
 	echo "* Downloading..."
-    curl -sL --location --progress-bar "${BLIMAN_SERVICE}/${BLIMAN_NAMESPACE}/BLIman/dist/dist/bliman-latest.zip" > "$bliman_zip_file"
+    curl -s -k --location --progress-bar "${BLIMAN_SERVICE}/${BLIMAN_NAMESPACE}/BLIman/dist/dist/bliman-latest.zip" > "$bliman_zip_file"
 
 	# check integrity
 	echo "* Checking archive integrity..."
@@ -414,7 +414,7 @@ EOF
 	echo ""
 	echo "Then issue the following command:"
 	echo ""
-	echo "    sdk help"
+	echo "    bli help"
 	echo ""
 	echo "Enjoy!!!"
 
